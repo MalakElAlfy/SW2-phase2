@@ -1,25 +1,27 @@
 package ASEproject.fawrySystem.authentication;
 
+import org.springframework.stereotype.Service;
+
 import ASEproject.fawrySystem.model.Person;
 import ASEproject.fawrySystem.model.User;
 import ASEproject.fawrySystem.util.Common;
-
+@Service
 public class UserAuthentication extends Authentication{
 
     @Override
     public boolean logInValidation(Person p) {
         for(int i=0;i<Common.users.size();i++){
-            if(p == Common.users.get(i)){
+            if(Common.users.get(p.getUsername())!=null){
                 return logIn=true;
             }
         }
-        return logIn==false;
+        return logIn=false;
     }
-
+    
     @Override
     public boolean signUpValidation(Person p) {
         for(int i=0;i<Common.users.size();i++){
-            if(p == Common.users.get(i)){
+            if(Common.users.get(p.getUsername())!=null){
                 return signUp=false;
             }
         }

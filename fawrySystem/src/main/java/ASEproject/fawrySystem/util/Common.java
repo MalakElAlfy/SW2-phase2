@@ -17,7 +17,7 @@ public class Common implements MyObservable {
     public static Map<Integer, RefundRequest> refundRequests = new HashMap<Integer, RefundRequest>();
     
     public static Map<String, User> users = new HashMap<String, User>();
-    public static Map<Integer, Admin> admins = new HashMap<Integer, Admin>();
+    public static Map<String, Admin> admins = new HashMap<String, Admin>();
     public static Map<Integer, PaidTransactions> completeTrans = new HashMap<Integer, PaidTransactions>();
     public static Map<Integer, RefundTransactions> refundTrans = new HashMap<Integer, RefundTransactions>();
 
