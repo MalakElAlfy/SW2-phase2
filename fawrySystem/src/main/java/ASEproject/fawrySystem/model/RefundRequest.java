@@ -2,6 +2,8 @@ package ASEproject.fawrySystem.model;
 
 import org.springframework.stereotype.Component;
 
+import ASEproject.fawrySystem.user.User;
+
 @Component
 public class RefundRequest {
 
@@ -9,6 +11,33 @@ public class RefundRequest {
     private int reqID;
     private int transID;
     private User user;
+    private boolean isAccepted;
+    private String relatedService;
+    private double amount;
+
+    public double getAmount() {
+        return amount;
+    }
+
+    public void setAmount(double amount) {
+        this.amount = amount;
+    }
+
+    public String getRelatedService() {
+        return relatedService;
+    }
+
+    public void setRelatedService(String relatedService) {
+        this.relatedService = relatedService;
+    }
+
+    public boolean isAccepted() {
+        return isAccepted;
+    }
+
+    public void setAccepted(boolean isAccepted) {
+        this.isAccepted = isAccepted;
+    }
 
     public User getUser() {
         return user;

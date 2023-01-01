@@ -4,8 +4,10 @@ import ASEproject.fawrySystem.model.Person;
 
 public abstract class Authentication {
 
-    boolean logIn=false;
-    boolean signUp=false;
+    protected boolean logIn;
+    protected boolean signUp;
+
+
 
 
     public boolean logInValidation(Person p)
@@ -17,6 +19,7 @@ public abstract class Authentication {
     {
         return signUp;
     };
+    
 
 
     
