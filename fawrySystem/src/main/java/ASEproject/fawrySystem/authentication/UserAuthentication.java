@@ -13,15 +13,12 @@ public class UserAuthentication extends Authentication{
         for(int i=0;i<Common.users.size();i++){
             if(Common.users.get(p.getUsername())!=null)
             {
-                if(p.getEmail()==Common.users.get(p.getUsername()).getEmail() && p.getPassword()==Common.users.get(p.getUsername()).getPassword())
-                {
                     User user=new User();
                     user=Common.users.get(p.getUsername());
                     user.setId();
                     Common.currentUsers.put(user.getId(), user);
                     logIn=true;
                     return logIn;
-                }
             }
         }
         return logIn;
